@@ -537,7 +537,7 @@ $ mv # app/views/layouts/application.html.erb layout_file #temporary change
 ```ruby
 assert_select "title", "Home | Ruby on Rails Tutorial Sample App"
 ```
-以上代码检查包含 "Home | Ruby on Rails Tutorial Sample App"字符串的<title>标签是否存在。把这个思路应用到其他三个的静态页面，代码清单3.22显示了测试代码。
+以上代码检查包含 "Home | Ruby on Rails Tutorial Sample App"字符串的\<title>标签是否存在。把这个思路应用到其他三个的静态页面，代码清单3.22显示了测试代码。
 
 ```ruby
 代码清单 3.22: 静态页面控制器标题测试。红色
@@ -1135,7 +1135,7 @@ guard :minitest, spring:true, all_on_start:false do
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
-/db/*.sqlite3-journal
+/db/*.sqlite3-journƒal
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
