@@ -793,11 +793,12 @@ $ mv layout_file # app/views/layouts/application.html.erb
 注意这里特殊的一行
 ```ruby
 <%= yield %>
+```
 这行代码是为了把每页的内容插入布局文件。现在想要确切地知道这是怎么回事还不重要；重要的是使用这个布局文件，确保，例如，访问网页/static_pages/home将**home.html.erb**转换成HTML文件，然后替换<%= yield %>。
 
 默认的Rails布局文件也包含没有什么使用价值的几个文件：
 
-```
+```html
 <%= stylesheet_link_tag ... %>
 <%= javascript_include_tag "application", ... %>
 <%= csrf_meta_tags %>
@@ -807,7 +808,7 @@ $ mv layout_file # app/views/layouts/application.html.erb
 pipeline（5.2.1节）的一部分，**csrf_meta_tags**方法是防止[跨页面劫持](http://en.wikipedia.org/wiki/Cross-site_request_forgery)(CSRF)，一种恶意的网络攻击。
 
 当然，代码清单3.28、3.30和3.31中的视图现在还都是包含布局的HTML结构，所以我们不得不移除它，仅仅留下内部的内容。清理后的视图如代码清单3.33，3.34和3.35一样。
-```
+```erb
 代码清单 3.33: 移除HTML结构的Home视图。 绿色
 # app/views/static_pages/home.html.erb
  <% provide(:title, "Home") %>
@@ -818,7 +819,7 @@ pipeline（5.2.1节）的一部分，**csrf_meta_tags**方法是防止[跨页面
   sample application.
 </p>
 ```
-```
+```erb
 代码清单 3.34: 移除HTML结构的Help视图。 绿色
 # app/views/static_pages/help.html.erb
  <% provide(:title, "Help") %>
