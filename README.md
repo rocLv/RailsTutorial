@@ -1,5 +1,11 @@
 # Rails 5 教程
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+然后，再使用Tex写公式。$$公式$$表示行间公式，本来Tex中使用\(公式\)表示行内公式，但因为Markdown中\是转义字符，所以在Markdown中输入行内公式使用\\(公式\\)，如下代码：
+
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+\\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
+
 这个教程是根据Michael Hartl的Rails Tutorial （3rd）的在线版翻译的，
 部分章节（应该是10章-12章）只是初译，欢迎Pull Request。
 
